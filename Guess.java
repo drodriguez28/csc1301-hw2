@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 
 public class Guess {
-<<<<<<< HEAD
     public static void instructions() {
         System.out.println("This program allows you to play a guessing game");
         System.out.println("I will think of a number between 1 and 100");
@@ -12,9 +11,6 @@ public class Guess {
     }
     public static void main(String[] args) {
         instructions();
-=======
-    public static void main(String[] args) {
->>>>>>> 8f9e0dfe8cb61b5912b575e3fc3e9c2c35940417
         
         Scanner sc = new Scanner(System.in);
         
@@ -34,7 +30,3 @@ public class Guess {
         }
     }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 8f9e0dfe8cb61b5912b575e3fc3e9c2c35940417
