@@ -3,11 +3,11 @@ import java.util.Random;
 
 public class Guess {
 
-    public static final int MAXIUM_NUMBER = 100;
+    public static final int MAXIMUM_NUMBER = 100;
 
     public static void instructions() {
         System.out.println("This program allows you to play a guessing game");
-        System.out.println("I will think of a number between 1 and " + MAXIUM_NUMBER);
+        System.out.println("I will think of a number between 1 and " + MAXIMUM_NUMBER);
         System.out.println("and will allow you to guess until you get it ");
         System.out.println(" For each guess, I will tell you whether the");
         System.out.println("right answer is higher or lower than your guess ");
@@ -15,23 +15,30 @@ public class Guess {
 
     public static void playGame() {
         Random rand = new Random();
-        int answer = rand.nextInt(MAXIUM_NUMBER) + 1;
-        System.out.println("random number " + answer);
+        int answer = rand.nextInt(MAXIMUM_NUMBER) + 1;
+
+        // DELETE ME
+        System.out.println("I'm thinking of a number... ");
 
         Scanner sc = new Scanner(System.in);
         int usersGuess = 0;
-        while (usersGuess != -1) {
-            // System.out.println("Guess a number between 1-50 (or –1 to stop):");
+        int counter = 0;
+
+        while (usersGuess != answer) {
+
+            System.out.print("Your guess? ");
             usersGuess = sc.nextInt();
-            // if the usersGuess is 17 tell its correct
-            if (usersGuess == answer) {
-                System.out.println("Correct");
-                // usersGuess= -1;
-                break;
-            } else {
-                System.out.println("Inncorrect");
+            if (usersGuess < answer) {
+                System.out.println("higher");
             }
+            if (usersGuess > answer) {
+                System.out.println("lower");
+            }
+
+            counter++;
+
         }
+        System.out.println("You got it right in " + counter + " guesses");
     }
 
     public static void main(String[] args) {
