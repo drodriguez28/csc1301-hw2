@@ -51,28 +51,45 @@ public class Guess {
     }
 
     public static void main(String[] args) {
-        // instructions();
+         instructions();
         // the method plays a single game and returns
-        // playGame();
+         playGame();
+         
+         
         while (true) {
-
             Scanner sc = new Scanner(System.in);
+            //
             System.out.println("Do you want to play again?");
+            // will print out play again once
             String usersInput = sc.next();
-            System.out.println(usersInput);
+            // whatever the user input is (yes or no) determining the players answer
             if (usersInput.equals("Yes")) {
-                System.out.println("Deivid was here ");
-                //playGame();
+                System.out.print("");
+                // uses this in order to excute a Yes
+                playGame();
+                
             }
 
             if (usersInput.equals("No")) {
-                System.out.println("Bob ");
+                //uses the users input to excute a NO
+                System.out.println("");
+                
                 break;
-
+                //
             }
-
+            // System.out.println();
+            //     results(playGame,counter);
         }
-        System.out.println("Results go here");
-
-    }
+        }
+        // put in results in here
+        
+    //     public static void results(int playGame,int counter) {
+    //         System.out.println("Overall results:");
+    //         System.out.println("Total games = " + playGame);
+    //         System.out.println("Total guesses = " + counter);
+    //         System.out.println("Guesses/game = ");
+    //         System.out.println("Best game = ");
+       
+    // }
 }
+
