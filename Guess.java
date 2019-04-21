@@ -51,11 +51,9 @@ public class Guess {
     }
 
     public static void main(String[] args) {
-         instructions();
-        // the method plays a single game and returns
-         playGame();
-         
-         
+        //instructions();
+        //playGame();
+
         while (true) {
             Scanner sc = new Scanner(System.in);
             //
@@ -63,33 +61,32 @@ public class Guess {
             // will print out play again once
             String usersInput = sc.next();
             // whatever the user input is (yes or no) determining the players answer
-            if (usersInput.equals("Yes")) {
+            if (usersInput.startsWith("Y") || usersInput.startsWith("y")) {
                 System.out.print("");
                 // uses this in order to excute a Yes
                 playGame();
-                
+
             }
 
-            if (usersInput.equals("No")) {
-                //uses the users input to excute a NO
+            if (usersInput.startsWith("N") || usersInput.startsWith("n")) {
+                // uses the users input to excute a NO
                 System.out.println("");
-                
+
                 break;
                 //
             }
-            // System.out.println();
-            //     results(playGame,counter);
+            // counter += userGuess;
+            // return counter;
         }
-        }
-        // put in results in here
-        
-    //     public static void results(int playGame,int counter) {
-    //         System.out.println("Overall results:");
-    //         System.out.println("Total games = " + playGame);
-    //         System.out.println("Total guesses = " + counter);
-    //         System.out.println("Guesses/game = ");
-    //         System.out.println("Best game = ");
-       
-    // }
-}
+    }
+    // put in results in here
 
+    public static void results(int playGame, int counter) {
+        System.out.println("Overall results:");
+        System.out.println("Total games = " + playGame);
+        System.out.println("Total guesses = " + counter);
+        System.out.println("Guesses/game = (float) total/playGame");
+        System.out.println("Best game = " );
+
+    }
+}
