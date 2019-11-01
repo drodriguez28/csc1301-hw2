@@ -8,6 +8,19 @@ Guessing A Number is a game that, allows you to guess a number until you get the
 I created this project for my, GSU CSC 1301 end of semester project. 
 
 
+## Build and Run
+```
+# Build the game 
+javac Guess.java
+
+# Run the game
+java Guess
+
+```
+
+
+
+
 ## Technologies Used 
 - Java 
 - Random class to generate a number between 1-100
