@@ -115,11 +115,3 @@ public class Guess {
     }
 }
 
-// the name called has to match the method definition
-// same number of parameters must match
-// the type of each parameter must match in order
-// three phases of a counter
-// 1. initi/zation (create the counter variable)- set the default value -int
-// counter =0 (before the while loop)
-// 2. modify (++1) counter = counter +1 || counter++ - in the loop
-// 3. use the final value - after the while loop
